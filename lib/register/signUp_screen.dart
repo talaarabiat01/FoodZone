@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_zoon/buttom_navigation_bar_screens/home_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -74,7 +75,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide:
-                        const BorderSide(width: 1, color: Colors.black),
+                            const BorderSide(width: 1, color: Colors.black),
                       ),
                       enabled: true,
                       fillColor: Colors.white,
@@ -99,7 +100,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide:
-                        const BorderSide(width: 1, color: Colors.black),
+                            const BorderSide(width: 1, color: Colors.black),
                       ),
                       enabled: true,
                       fillColor: Colors.white,
@@ -114,7 +115,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                 ),
-
                 Positioned(
                   height: 100,
                   width: 250,
@@ -125,7 +125,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide:
-                        const BorderSide(width: 1, color: Colors.black),
+                            const BorderSide(width: 1, color: Colors.black),
                       ),
                       enabled: true,
                       fillColor: Colors.white,
@@ -150,7 +150,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide:
-                        const BorderSide(width: 1, color: Colors.black),
+                            const BorderSide(width: 1, color: Colors.black),
                       ),
                       enabled: true,
                       fillColor: Colors.white,
@@ -169,7 +169,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     left: 23,
                     top: MediaQuery.of(context).size.height * 0.49,
                     child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomeScreen()));
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xffB31312),
                           shape: RoundedRectangleBorder(
@@ -196,13 +201,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 Positioned(
                     left: 80,
-                    top:MediaQuery.of(context).size.height * 0.62,
+                    top: MediaQuery.of(context).size.height * 0.62,
                     child: IconButton(
                         onPressed: () {},
                         icon: Image.asset("assets/images/facebook.png"))),
                 Positioned(
                     left: 160,
-                    top:MediaQuery.of(context).size.height * 0.62,
+                    top: MediaQuery.of(context).size.height * 0.62,
                     child: IconButton(
                         onPressed: () {},
                         icon: Image.asset("assets/images/google.png")))

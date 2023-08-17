@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_zoon/register/logIn_screen.dart';
+import 'package:food_zoon/register/signUp_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -24,7 +26,11 @@ class WelcomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 20,),
             ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignUpScreen()));
+                },
                 style: ElevatedButton.styleFrom(
                  backgroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
@@ -39,7 +45,12 @@ class WelcomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 15,),
             ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => LogInScreen()));
+
+                },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xffB31312),
                     shape: RoundedRectangleBorder(

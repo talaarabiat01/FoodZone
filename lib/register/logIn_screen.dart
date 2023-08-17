@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_zoon/buttom_navigation_bar_screens/home_screen.dart';
+import 'package:food_zoon/register/forget_password_screen.dart';
+import 'package:food_zoon/register/signUp_screen.dart';
 
 class LogInScreen extends StatefulWidget {
   const LogInScreen({Key? key}) : super(key: key);
@@ -118,7 +121,11 @@ class _LogInScreenState extends State<LogInScreen> {
                     left: 150,
                     top: MediaQuery.of(context).size.height * 0.26,
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => ForgetPassScreen()));
+                        },
                         child: Text(
                           "Forget Password ?",
                           style: TextStyle(
@@ -130,7 +137,11 @@ class _LogInScreenState extends State<LogInScreen> {
                     left: 20,
                     top: MediaQuery.of(context).size.height * 0.33,
                     child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(builder: (context) => HomeScreen()));
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xffB31312),
                           shape: RoundedRectangleBorder(
@@ -155,7 +166,11 @@ class _LogInScreenState extends State<LogInScreen> {
                     left: 186,
                     top: MediaQuery.of(context).size.height * 0.40,
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => SignUpScreen()));
+                        },
                         child: Text(
                           "sign up",
                           style: TextStyle(
